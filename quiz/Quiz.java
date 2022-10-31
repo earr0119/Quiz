@@ -73,12 +73,12 @@ public class Quiz {
 				option_User_Value = -1;
 			}
 
-			// Comprobar si nos esta molestando
+			//make sure user type the right options
 			if (option_User_Value == -1) {
 				continue;
 			}
 
-			// Verificar la respuesta del usuario
+			// verifying user answer
 			if (Objects.equals(answers[pointer][option_User_Value], correctAnswer[pointer])) {
 				user_Score += pointsEarned;
 				System.out.println("Your Answer is correct... You Are Doing Great...");
@@ -86,7 +86,7 @@ public class Quiz {
 				user_Score -= pointsLose;
 				System.out.println("Oops... Wrong Answer, Don't Give Up ");
 			}
-			// Preguntar al usuario si desea continuar
+			//ask user if wants to continue
 
 			boolean isCorrectValue = true;
 
@@ -99,7 +99,8 @@ public class Quiz {
 					isCorrectValue = true;
 					break;
 				case "N":
-					// Ejecutar estas instrucciones nates que cierre el while
+					
+					// Executing instructions before while close
 
 					System.out.println(name.toUpperCase() + " Your Score is: " + user_Score);
 					return;
@@ -112,12 +113,10 @@ public class Quiz {
 
 	}
 	
-
 		static void printQuestionAndAnswers(String question, String[] answers){
 			
 			System.out.println("Question: " + question);
 			
-
 			System.out.println("a. " + answers[0]);
 			System.out.println("b. " + answers[1]);
 			System.out.println("c. " + answers[2]);

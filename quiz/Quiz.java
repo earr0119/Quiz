@@ -37,8 +37,8 @@ public class Quiz {
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
-		final int pointsEarned = 5;
-		final int pointsLose = 3;
+		final int POINTSEARNED = 5;
+		final int POINTLOSE = 3;
 		String name;
 		int user_Score = 0;
 		int option_User_Value = 0;
@@ -87,10 +87,10 @@ public class Quiz {
 
 			// verifying user answer
 			if (Objects.equals(answers[pointer][option_User_Value], correctAnswer[pointer])) {
-				user_Score += pointsEarned;
+				user_Score += POINTSEARNED;
 				System.out.println("Your Answer is correct... You Are Doing Great...");
 			} else {
-				user_Score -= pointsLose;
+				user_Score -= POINTLOSE;
 				System.out.println("Oops... Wrong Answer, Don't Give Up ");
 			}
 			// ask user if wants to continue
